@@ -1,133 +1,127 @@
 ---
 layout: page
-title: "WhoAmI"
-description: "What Doesn't Kill Me Makes Me Stronger"
-header-img: "img/about-bg.jpg"
+title: "SOI"
+description: "ОПРЕДЕЛЕНИЕ ПОЭЗИИ"
 ---
 
-<!-- Language Selector -->
-<select onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
-    <option value="0" selected> 中文 Chinese </option>
-    <option value="1"> 英语 English </option>
+<style>
+/* 诗歌排版增强 */
+.poem-container {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.8;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.stanza {
+    margin: 2rem 0;
+    position: relative;
+}
+.cyrillic {
+    font-family: 'Times New Roman', 'Georgia', serif;
+    font-style: italic;
+}
+.poem-divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+    margin: 2.5rem 0;
+}
+</style>
+
+<!-- 语言选择器 -->
+<select class="lang-selector" onchange="onLanChange(this.value)">
+    <option value="0" selected>中文 / 汉语</option>
+    <option value="1">Русский / 俄语</option>
 </select>
 
-<!-- Chinese Version -->
-<div class="zh post-container">
-    <blockquote>
-        不耻最后。即使慢，驰而不息，纵令落后，纵令失败，但一定可以达到他所向的目标。
-    </blockquote>
-    <p>
-        这是鲁迅先生的一句话，深得我心。念书那时候，放学回家总喜欢走不同的小巷。回家的路小巷子很多，但是不管走哪条绕了多久最后总是能到家的，因为我认准了家的方向。那时我就在想，可能人生的旅途亦是如此。人生的旅途是很长很长，偶尔会迷路，偶尔会绕远路，但牢记最终的方向，只要向着它走总会到达。
-    </p>
-    <p>
-        我是个程序员，高大上一点的说法叫做“软件工程师”，屌丝一点叫“码农”。目前主要在杭州从事iOS开发工作，未来希望能够涉猎更广阔的知识领域。喜欢混迹于github，fork爱好者🙄。关注业内技术新闻主要通过feedly订阅的技术博客更新、微博上的feed更新以及github的explore和trending.这个博客是新开的，以前的老博客太久没维护索性舍弃了。2017年需要成为一名合格的Blogger（其实也开了个公众号😄）!
-    </p>
-    <p>
-        我是个篮球迷🏀，十多年的老球迷。从姚明时代火箭开始，一直都很喜欢篮球。年轻时候抱着球去球场就能呆一下午。现在老了，只能看看球了，但对篮球的喜爱依然不减。每天中午关注赛果，每天晚上看十佳球集锦，周末挑一个早上看一场直播或者玩玩NBA2K，这些都是我生活中的乐趣。今年通过在PS4上玩NBA2K，认识了很多友善的外国友人，一直保持联系而且今年跨年还收到了他们的新年祝福，真的很开心。PSN:ParsifalChang，欢迎切磋。
-    </p>
-    <p>
-        我是个非典型宅男。我喜欢看动画不爱看漫画，不上A\B站或者其他此类社区，不喜欢弹幕，不是很懂二次元和一些奇怪的网络用语之类的东西。希望玩游戏，却只钟情于NBA2K，其他游戏都是抱着体验的态度试试玩一会儿。最爱的动画是SD(灌篮高手)，反复看了很多很多遍。最近这段时间觉得镇魂街和一人之下这两部国漫挺不错的。
-    </p>
-    <p style="text-align:right;">
-    -- Parsifal
-    </p>
-</div>
-
-<!-- English Version -->
-<div class="en post-container">
-    <blockquote>
-        "I’ve missed more than 9000 shots in my career. I’ve lost almost 300 games. Twenty-six times I’ve been trusted to take the game winning shot and missed. I’ve failed over and over and over again in my life. And that is why I succeed." 
-    </blockquote>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/wEefM0bQGCg?rel=0" frameborder="0" allowfullscreen></iframe>
-    <p>
-        First of all,this line was spoken by Michael Jordan in "Failure".These words always inspire me a lot When I am down.
-        Hmmmm,so who am I?I'm a programmer from China,uh,exactly an iOS developer since 2014.Lol,I hope I'll be an full-stack progammer in the future.Yeah,I got a plan and working on it.😀I always call myself a programmer,not a iOS developer.That's all."Talk is cheap,show me the code",alright?
-    </p>
-    <p>
-        And I'm sure you know that I'm a NBA fan now🏀.Michael Jordan is widely considered the greatest NBA player in the world.He's one of my favorite player,the other two are Allen Iverson and Chris Paul.I will be disappointed if you never heard them:(.And I like playing NBA2K on my PS4.Here is my PSN:ParsifalChang.Welcome to challenge me,but you'd better watch my videos on my <a href="https://youtube.com/channel/UC5M7pXoTMgNZCn5GvKeT4og">Youtube Channel</a> first cause I'm so good at it😝.
-    </p>
-    <p style="text-align:right;">
-    -- Parsifal
-    </p>
-
-</div>
-
-<!-- Handle Language Change -->
-<script type="text/javascript">
-    var $zh = document.querySelector(".zh");
-    var $en = document.querySelector(".en");
-    function onLanChange(index){
-        if(index == 0){
-            $zh.style.display = "block";
-            $en.style.display = "none";
-        }else{
-            $en.style.display = "block";
-            $zh.style.display = "none";
-        }
-    }
-    onLanChange(0);
-</script>
-
-
-
-{% if site.duoshuo_username %}
-<!-- 多说评论框 start -->
-<div class="comment">
-    <div class="ds-thread"
-    {% if site.duoshuo_username == "Parsifal" %}
-        data-thread-id="6372025202427037000"
-    {% else %}
-        data-thread-key="{{site.duoshuo_username}}/about"
-    {% endif %}
-
-    data-title="{{page.title}}"
-    data-url="{{site.url}}/about/"></div>
-</div>
-<!-- 多说评论框 end -->
-
-<!-- Duoshuo hacking -->
-<input id="dsUser" type="hidden" value="{{site.duoshuo_username}}"  />
-
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    // dynamic User hacking by Hux
-    var _user = document.getElementById('dsUser').value;
-    // duoshuo comment query.
-    var duoshuoQuery = {short_name: _user };
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0]
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-</script>
-<!-- 多说公共JS代码 end -->
-{% endif %}
-
-
-{% if site.disqus_username %}
-<!-- disqus 评论框 start -->
-<div class="comment">
-    <div id="disqus_thread" class="disqus-thread">
-
+<!-- 中文版本 -->
+<div class="zh post-container poem-container">
+    <div class="stanza">
+        <h2>SOI (stupid orange idea)</h2>
+        <p>一个致力于收集最精妙愚蠢主意的网站</p>
+        
+        <hr class="poem-divider">
+        
+        <p>这是黑夜在海滨浴场<br>
+        深深的底部迫切寻求的东西，<br>
+        这是用颤抖而潮湿的手掌<br>
+        将星星掬进了养鱼池里。</p>
+        
+        <hr class="poem-divider">
+        
+        <p>闷热比水中的木板更单调，<br>
+        天穹仿佛坍塌，像棵赤杨。<br>
+        <span style="letter-spacing: 0.1em;">满天星斗可相视大笑，</span><br>
+        宇宙本是个荒僻的地方。</p>
     </div>
+    
+    <p style="text-align: right; margin-top: 3rem;">
+        鲍里斯·帕斯捷尔纳克 - 诗的定义
+
+    </p>
 </div>
-<!-- disqus 评论框 end -->
 
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "{{site.disqus_username}}";
-    var disqus_identifier = "{{site.disqus_username}}/{{page.url}}";
-    var disqus_url = "{{site.url}}{{page.url}}";
+<!-- 俄语版本 -->
+<div class="en post-container poem-container" style="display:none;">
+    <div class="stanza">
+        <h2 class="cyrillic">SOI (stupid orange idea)</h2>
+        <p class="cyrillic">это сайт, посвящённый сбору<br>самых изысканных глупых идей</p>
+        
+        <hr class="poem-divider">
+        
+        <p class="cyrillic">Всё, что ночи так важно сыскать<br>
+        На глубоких купаленных доньях,<br>
+        И звезду донести до садка<br>
+        На трепещущих мокрых ладонях.</p>
+        
+        <hr class="poem-divider">
+        
+        <p class="cyrillic">Площе досок в воде - духота.<br>
+        Небосвод завалился ольхою,<br>
+        <span style="letter-spacing: 0.05em;">Этим звёздам к лицу б хохотать,</span><br>
+        А вселенная - место глухое.</p>
+    </div>
+    
+    <p style="text-align: right; margin-top: 3rem;" class="cyrillic">
+        БОРИС ПАСТЕРНАК-ОПРЕДЕЛЕНИЕ ПОЭЗИИ
 
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
+    </p>
+</div>
+
+<script>
+// 语言切换增强版
+const langMap = {
+    0: { element: document.querySelector('.zh'), name: '中文' },
+    1: { element: document.querySelector('.en'), name: 'Русский' }
+};
+
+function onLanChange(value) {
+    // 淡出过渡
+    Object.values(langMap).forEach(lang => {
+        lang.element.style.opacity = 0;
+        lang.element.style.transition = 'opacity 0.3s ease';
+    });
+    
+    setTimeout(() => {
+        Object.values(langMap).forEach(lang => {
+            lang.element.style.display = 'none';
+        });
+        langMap[value].element.style.display = 'block';
+        
+        // 淡入过渡
+        setTimeout(() => {
+            langMap[value].element.style.opacity = 1;
+        }, 50);
+        
+        // 同步更新浏览器历史记录
+        history.pushState({}, '', `#${value}`);
+    }, 300);
+}
+
+// 初始化语言状态
+window.addEventListener('load', () => {
+    const hash = window.location.hash.substr(1);
+    onLanChange(hash === '1' ? 1 : 0);
+});
 </script>
-<!-- disqus 公共JS代码 end -->
-{% endif %}
