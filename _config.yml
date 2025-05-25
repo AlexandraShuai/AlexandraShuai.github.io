@@ -62,7 +62,7 @@ input: GFM                            # use Github Flavored Markdown !important
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "#独角兽 #俄语人 #喜食人类 #不是连环杀人狂"
-sidebar-avatar: /img/avatar-parsifal.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+#sidebar-avatar: /img/avatar-parsifal.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
@@ -72,12 +72,11 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 
 
 
- #Friends
-riends: [
-    {
-       title: "老乡群",
-        #href: "http://huangxuan.me"
-        title: "lt",
-         title: "图图",
-    },
-]
+# Friends
+friends:
+  - title: "老乡群"
+    href: "#"  # 先保留占位，未来替换
+  - title: "lt"
+    href: "#"
+  - title: "图图"
+    href: "#"
